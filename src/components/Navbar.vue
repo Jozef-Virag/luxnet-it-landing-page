@@ -11,7 +11,6 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
@@ -41,16 +40,24 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: "#team",
+    label: "O nás",
   },
   {
-    href: "#team",
-    label: "Team",
+    href: "#sluzby",
+    label: "Služby",
+  },
+  {
+    href: "#projects",
+    label: "Projekty",
+  },
+  {
+    href: "#recenzie",
+    label: "Recenzie",
   },
   {
     href: "#contact",
-    label: "Contact",
+    label: "Kontakt",
   },
   {
     href: "#faq",
@@ -93,7 +100,7 @@ const isOpen = ref<boolean>(false);
       <ChevronsDown
         class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
       />
-      ShadcnVue</a
+      LuxNet</a
     >
     <!-- Mobile -->
     <div class="flex items-center lg:hidden">
@@ -155,9 +162,6 @@ const isOpen = ref<boolean>(false);
     <NavigationMenu class="hidden lg:block">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger class="bg-card text-base">
-            Features
-          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
               <img
