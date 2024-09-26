@@ -24,8 +24,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { ChevronsDown, Menu } from "lucide-vue-next";
-import GithubIcon from "@/icons/GithubIcon.vue";
+import { Menu } from "lucide-vue-next";
 import ToggleTheme from "./ToggleTheme.vue";
 
 interface RouteProps {
@@ -40,7 +39,7 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#team",
+    href: "#o-nas",
     label: "O nás",
   },
   {
@@ -48,15 +47,11 @@ const routeList: RouteProps[] = [
     label: "Služby",
   },
   {
-    href: "#projects",
-    label: "Projekty",
-  },
-  {
     href: "#recenzie",
     label: "Recenzie",
   },
   {
-    href: "#contact",
+    href: "#kontakt",
     label: "Kontakt",
   },
   {
@@ -87,61 +82,62 @@ const isOpen = ref<boolean>(false);
 
 <template>
   <header
-    :class="{
+      :class="{
       'shadow-light': mode === 'light',
       'shadow-dark': mode === 'dark',
       'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
     <a
-      href="/"
-      class="font-bold text-lg flex items-center"
+        href="/#domov"
+        class="font-bold text-lg flex items-center lg:flex"
     >
-      <ChevronsDown
-        class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
+      <img
+          class="ml-5 h-7"
+          :src="
+            mode == 'light' ? 'logo-1-dark.png' : 'logo-1-light.png'
+          "
+          alt="LUXNET"
       />
-      LuxNet</a
-    >
+    </a>
+
     <!-- Mobile -->
-    <div class="flex items-center lg:hidden">
+    <div class="flex items-center lg:hidden ml-auto">
       <Sheet v-model:open="isOpen">
         <SheetTrigger as-child>
           <Menu
-            @click="isOpen = true"
-            class="cursor-pointer"
+              @click="isOpen = true"
+              class="cursor-pointer"
           />
         </SheetTrigger>
 
         <SheetContent
-          side="left"
-          class="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card"
+            side="left"
+            class="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card"
         >
           <div>
             <SheetHeader class="mb-4 ml-4">
               <SheetTitle class="flex items-center">
                 <a
-                  href="/"
-                  class="flex items-center"
+                    href="/"
+                    class="flex items-center"
                 >
-                  <ChevronsDown
-                    class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
-                  />
-                  ShadcnVue
+                  <img class="h-7" src="@/assets/logo-1.png" alt="LUXNET">
                 </a>
               </SheetTitle>
             </SheetHeader>
 
             <div class="flex flex-col gap-2">
               <Button
-                v-for="{ href, label } in routeList"
-                :key="label"
-                as-child
-                variant="ghost"
-                class="justify-start text-base"
+                  v-for="{ href, label } in routeList"
+                  :key="label"
+                  as-child
+                  variant="ghost"
+                  class="justify-start text-base"
               >
                 <a
-                  @click="isOpen = false"
-                  :href="href"
+                    @click="isOpen = false"
+                    :href="href"
                 >
                   {{ label }}
                 </a>
@@ -165,15 +161,15 @@ const isOpen = ref<boolean>(false);
           <NavigationMenuContent>
             <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
               <img
-                src="https://www.radix-vue.com/logo.svg"
-                alt="Beach"
-                class="h-full w-full rounded-md object-cover"
+                  src="https://www.radix-vue.com/logo.svg"
+                  alt="Beach"
+                  class="h-full w-full rounded-md object-cover"
               />
               <ul class="flex flex-col gap-2">
                 <li
-                  v-for="{ title, description } in featureList"
-                  :key="title"
-                  class="rounded-md p-3 text-sm hover:bg-muted"
+                    v-for="{ title, description } in featureList"
+                    :key="title"
+                    class="rounded-md p-3 text-sm hover:bg-muted"
                 >
                   <p class="mb-1 font-semibold leading-none text-foreground">
                     {{ title }}
@@ -188,13 +184,13 @@ const isOpen = ref<boolean>(false);
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink asChild>
+          <NavigationMenuLink as-child>
             <Button
-              v-for="{ href, label } in routeList"
-              :key="label"
-              as-child
-              variant="ghost"
-              class="justify-start text-base"
+                v-for="{ href, label } in routeList"
+                :key="label"
+                as-child
+                variant="ghost"
+                class="justify-start text-base"
             >
               <a :href="href">
                 {{ label }}
@@ -207,24 +203,10 @@ const isOpen = ref<boolean>(false);
 
     <div class="hidden lg:flex">
       <ToggleTheme />
-
-      <Button
-        as-child
-        size="sm"
-        variant="ghost"
-        aria-label="View on GitHub"
-      >
-        <a
-          aria-label="View on GitHub"
-          href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
-          target="_blank"
-        >
-          <GithubIcon class="size-5" />
-        </a>
-      </Button>
     </div>
   </header>
 </template>
+
 
 <style scoped>
 .shadow-light {

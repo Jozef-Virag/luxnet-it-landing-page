@@ -14,35 +14,33 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free Shadcn/Vue template.",
-    value: "item-1",
+    "question": "Aké typy webových stránok vytvárate?",
+    "answer": "Vytvárame rôzne typy webových stránok vrátane firemných stránok, e-shopov a webových aplikácií a blogov, ktoré sú prispôsobené potrebám našich klientov.",
+    "value": "item-1"
   },
   {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
-    value: "item-2",
+    "question": "Ponúkate aj služby SEO pre webové stránky?",
+    "answer": "Áno, poskytujeme optimalizáciu pre vyhľadávače (SEO), aby sme zabezpečili lepšiu viditeľnosť vašich stránok vo vyhľadávačoch.",
+    "value": "item-2"
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
-    value: "item-3",
+    "question": "Ako prebieha proces vývoja webovej stránky?",
+    "answer": "Náš proces zahŕňa analýzu požiadaviek, návrh, vývoj, testovanie a nasadenie stránky. Počas celého procesu úzko spolupracujeme s našimi klientmi.",
+    "value": "item-3"
   },
   {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    value: "item-4",
+    "question": "Poskytujete aj podporu po dokončení projektu?",
+    "answer": "Áno, ponúkame rôzne úrovne podpory, vrátane technickej podpory a údržby webových stránok, aby sme zabezpečili ich plynulý chod.",
+    "value": "item-4"
   },
   {
-    question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
-    value: "item-5",
-  },
+    "question": "Ako dlho trvá vývoj webovej stránky?",
+    "answer": "Dĺžka vývoja webovej stránky závisí od zložitosti projektu, avšak na začiatku každého projektu Vám poskytneme predbežný časový rámec.",
+    "value": "item-5"
+  }
 ];
+
+
 </script>
 
 <template>
@@ -51,10 +49,10 @@ const FAQList: FAQProps[] = [
     class="container md:w-[700px] py-24 sm:py-32"
   >
     <div class="text-center mb-8">
-      <h2 class="text-lg text-primary text-center mb-2 tracking-wider">FAQS</h2>
+      <h2 class="text-lg text-primary text-center mb-2 tracking-wider">FAQ</h2>
 
       <h2 class="text-3xl md:text-4xl text-center font-bold">
-        Common Questions
+        Časté otázky
       </h2>
     </div>
 
@@ -75,15 +73,15 @@ const FAQList: FAQProps[] = [
     </Accordion>
 
     <h3 class="font-medium mt-4">
-      Still have questions?
+      Chcete sa dozvedieť viac ?
       <a
         href="#"
         class="text-muted-foreground"
       >
         <a
-          href="#"
-          class="underline"
-          >Contact us</a
+          href="/#kontakt"
+          class="underline text-primary"
+          >Kontaktujte nás</a
         >
       </a>
     </h3>

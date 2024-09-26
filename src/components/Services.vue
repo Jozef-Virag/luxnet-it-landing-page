@@ -24,19 +24,8 @@ const serviceList: ServiceProps[] = [
         "Pomáhame vytvoriť moderné a funkčné e-shopy, ktoré sú optimalizované pre maximálnu konverziu a jednoduchú správu.",
   },
   {
-    title: "Opravy počítačov",
-    description:
-        "Zabezpečujeme rýchle a efektívne opravy hardvéru a softvéru pre všetky typy počítačových zariadení.",
-  },
-  {
-    title: "Údržba a optimalizácia systémov",
-    description:
-        "Ponúkame služby na údržbu a optimalizáciu výkonu počítačov, aby ste mali vždy hladký a efektívny chod.",
-  },
-  {
-    title: "Integrácia a správa sociálnych médií",
-    description:
-        "Pomôžeme vám prepojiť vašu webstránku so sociálnymi sieťami a efektívne spravovať váš online obsah.",
+    "title": "Redizajn webstránok",
+    "description": "Vytvoríme moderný a atraktívny vzhľad vašej webstránky, ktorý zlepší používateľskú skúsenosť a zvýši konverzie."
   },
   {
     title: "SEO optimalizácia",

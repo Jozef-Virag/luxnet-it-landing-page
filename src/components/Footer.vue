@@ -1,161 +1,162 @@
-<script setup lang="ts">
-import { ChevronsDown } from "lucide-vue-next";
+<script lang="ts" setup>
 import Separator from "./ui/separator/Separator.vue";
+import { useColorMode } from "@vueuse/core";
+const mode = useColorMode();
 </script>
 
 <template>
   <footer
-    id="footer"
-    class="container py-24 sm:py-32"
+      id="footer"
+      class="container py-24 sm:py-32"
   >
     <div class="p-10 bg-muted/50 dark:bg-card border rounded-2xl">
       <div
-        class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8"
+          class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8"
       >
         <div class="col-span-full xl:col-span-2">
           <a
-            href="#"
-            class="flex font-bold items-center"
+              class="flex font-bold items-center"
+              href="#"
           >
-            <ChevronsDown
-              class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
+            <img
+                class="ml-5 h-7"
+                :src="
+            mode == 'light' ? 'logo-2-dark.png' : 'logo-2-light.png'
+          "
+                alt=""
             />
-
-            <h3 class="text-2xl">Shadcn-Vue</h3>
+            <img
+                class="ml-5 h-7"
+                :src="
+            mode == 'light' ? 'logo-1-dark.png' : 'logo-1-light.png'
+          "
+                alt="LUXNET"
+            />
           </a>
         </div>
 
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Contact</h3>
+          <h3 class="font-bold text-lg">Kontakt</h3>
           <div>
             <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
+                class="opacity-60 hover:opacity-100"
+                href="/#kontakt"
             >
-              Github
+              Email
             </a>
           </div>
 
           <div>
             <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
+                class="opacity-60 hover:opacity-100"
+                href="/#kontakt"
             >
-              Twitter
+              Telefon
             </a>
           </div>
 
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h3 class="font-bold text-lg">Služby</h3>
           <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
+            <p
+                class="opacity-60 hover:opacity-100"
             >
-              Instagram
-            </a>
+              Vývoj webovej stránky
+            </p>
+          </div>
+
+          <div>
+            <p
+                class="opacity-60 hover:opacity-100"
+            >
+              E-shop na kľúč
+            </p>
+          </div>
+
+          <div>
+            <p
+                class="opacity-60 hover:opacity-100"
+            >
+              Vývoj mobilnej aplikácie
+            </p>
+          </div>
+
+          <div>
+            <p
+                class="opacity-60 hover:opacity-100"
+            >
+              Redizajn webovej stránky
+            </p>
           </div>
         </div>
 
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Platforms</h3>
+          <h3 class="font-bold text-lg">Pomoc</h3>
           <div>
             <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
+                class="opacity-60 hover:opacity-100"
+                href="/#kontakt"
             >
-              iOS
+              Kontaktujte nás
             </a>
           </div>
 
           <div>
             <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Android
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Web
-            </a>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Help</h3>
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
+                class="opacity-60 hover:opacity-100"
+                href="/#faq"
             >
               FAQ
             </a>
           </div>
 
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Feedback
-            </a>
-          </div>
+<!--          <div>-->
+<!--            <router-link class="opacity-60 hover:opacity-100" to="/privacy-policy">Pravidlá ochrany osobných údajov</router-link>-->
+<!--          </div>-->
         </div>
 
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Socials</h3>
+          <h3 class="font-bold text-lg">Sociálne siete</h3>
           <div>
             <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
+                class="opacity-60 hover:opacity-100"
+                href="#"
             >
-              Twitch
+              LinkedIn
             </a>
           </div>
 
           <div>
             <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
+                class="opacity-60 hover:opacity-100"
+                href="#"
             >
-              Discord
+              Instagram
             </a>
           </div>
 
           <div>
             <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
+                class="opacity-60 hover:opacity-100"
+                href="#"
             >
-              Dribbble
+              Twitter
             </a>
           </div>
         </div>
       </div>
 
-      <Separator class="my-6" />
-      <section className="">
-        <h3 class="">
-          &copy; 2024 Designed and developed by
+      <Separator class="my-6"/>
+      <section class="text-center">
+        <h3>
+          &copy; 2024 Navrhnuté a vyvinuté spoločnosťou
           <a
-            target="_blank"
-            href="https://github.com/leoMirandaa"
-            className="text-primary transition-all border-primary hover:border-b-2"
+              class="text-primary transition-all border-primary hover:border-b-2"
+              href="/"
           >
-            Leo Miranda
+            LuxNet
           </a>
         </h3>
       </section>
