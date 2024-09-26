@@ -90,12 +90,12 @@ const isOpen = ref<boolean>(false);
   >
     <a
         href="/#domov"
-        class="font-bold text-lg flex items-center lg:flex"
+        class="font-bold text-lg flex items-center hidden lg:flex"
     >
       <img
           class="ml-5 h-7"
           :src="
-            mode == 'light' ? 'logo-1-dark.png' : 'logo-1-light.png'
+            mode == 'light' ? 'logo-1-light.png' : 'logo-1-dark.png'
           "
           alt="LUXNET"
       />
@@ -122,7 +122,13 @@ const isOpen = ref<boolean>(false);
                     href="/"
                     class="flex items-center"
                 >
-                  <img class="h-7" src="@/assets/logo-1.png" alt="LUXNET">
+                  <img
+                      class="h-7"
+                      :src="
+            mode == 'light' ? 'logo-1-light.png' : 'logo-1-dark.png'
+          "
+                      alt="LUXNET"
+                  />
                 </a>
               </SheetTitle>
             </SheetHeader>
@@ -160,11 +166,6 @@ const isOpen = ref<boolean>(false);
         <NavigationMenuItem>
           <NavigationMenuContent>
             <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
-              <img
-                  src="https://www.radix-vue.com/logo.svg"
-                  alt="Beach"
-                  class="h-full w-full rounded-md object-cover"
-              />
               <ul class="flex flex-col gap-2">
                 <li
                     v-for="{ title, description } in featureList"
