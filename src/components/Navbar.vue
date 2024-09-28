@@ -95,7 +95,7 @@ const isOpen = ref<boolean>(false);
       <img
           class="ml-5 h-7"
           :src="
-            mode == 'light' ? 'logo-1-dark.png' : 'logo-1-light.png'
+            mode == 'light' ? 'logo-1-light.png' : 'logo-1-dark.png'
           "
           alt="LUXNET"
       />
@@ -125,7 +125,7 @@ const isOpen = ref<boolean>(false);
                   <img
                       class="h-7"
                       :src="
-            mode == 'light' ? 'logo-1-dark.png' : 'logo-1-light.png'
+            mode == 'light' ? 'logo-1-light.png' : 'logo-1-dark.png'
           "
                       alt="LUXNET"
                   />
