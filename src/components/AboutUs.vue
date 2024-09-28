@@ -5,7 +5,7 @@ import WorldMap from "@/components/WorldMap.vue"
 <template>
   <section
       id="o-nas"
-      class="container lg:w-[75%] py-24 sm:py-32"
+      class="container lg:w-[75%] py-12 sm:py-32"
   >
     <div class="text-center mb-8">
       <h2 class="text-lg text-primary text-center mb-2 tracking-wider">O nás</h2>
