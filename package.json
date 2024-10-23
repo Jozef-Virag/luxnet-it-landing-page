@@ -26,6 +26,9 @@
   },
   "dependencies": {
     "@selemondev/vue3-marquee": "^0.0.8",
+    "@tsparticles/configs": "^3.5.0",
+    "@tsparticles/engine": "^3.5.0",
+    "@tsparticles/vue3": "^3.0.1",
     "@vee-validate/zod": "^4.13.2",
     "@vueuse/core": "^10.11.1",
     "class-variance-authority": "^0.7.0",
@@ -33,10 +36,12 @@
     "embla-carousel": "^8.1.8",
     "embla-carousel-vue": "^8.1.8",
     "lucide-vue-next": "^0.424.0",
-    "particles.js": "^2.0.0",
     "radix-vue": "^1.9.3",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
+    "tsparticles": "^3.5.0",
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-preset-links": "^2.12.0",
     "vee-validate": "^4.13.2",
     "vue": "^3.4.36",
     "zod": "^3.23.8"

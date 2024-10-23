@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-
-import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+import Navbar from "@/components/Navbar.vue";
+
+
 
 </script>
 
 <template>
   <Navbar/>
-  <router-view />
+
+  <router-view/>
   <Footer/>
 </template>
 
@@ -18,5 +20,4 @@ body, html {
   overflow-x: hidden;
   height: 100%;
 }
-
 </style>
