@@ -6,64 +6,57 @@ import AboutUs from "@/components/AboutUs.vue";
 import Contact from "@/components/Contact.vue";
 import FAQ from "@/components/FAQ.vue";
 
-import type {Container} from "@tsparticles/engine";
-import {Options} from "tsparticles-engine";
 
-const options: Options = {
+import type { Container, RecursivePartial, IOptions } from "@tsparticles/engine";
+
+const options: RecursivePartial<IOptions> = {
   particles: {
     number: {
-      value: 30
+      value: 30,
     },
     color: {
-      value: "#c2c2c2"
+      value: "#c2c2c2",
     },
     links: {
       enable: true,
       distance: 250,
       color: "#c2c2c2",
       opacity: 0.4,
-      width: 2
+      width: 2,
     },
     shape: {
-      type: "circle"
+      type: "circle",
     },
     opacity: {
-      value: 1
+      value: 1,
     },
     size: {
       value: {
         min: 4,
-        max: 6
-      }
+        max: 6,
+      },
     },
     move: {
       enable: true,
-      speed: 2
-    }
+      speed: 2,
+    },
   },
   background: {
-    color: "transparent"
+    color: { value: "transparent" }, // musí byť objekt, nie string
   },
   interactivity: {
     events: {
-      onclick: {
+      onClick: {
         enable: true,
-        mode: "push"
+        mode: "push",
       },
-      resize: true
-    }
+    },
   },
-  retina_detect: true,
-  fullscreen: {
-    enable: false // Particles will not cover the entire page
-  },
-  zIndex: {
-    value: -1 // Ensure particles are behind other content
-  }
+  detectRetina: true,
 };
 
 
-// Load particles asynchronously
+
 const particlesLoaded = async (container: Container) => {
   console.log(container);
 };
